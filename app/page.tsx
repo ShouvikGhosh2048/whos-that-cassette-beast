@@ -1,5 +1,11 @@
 import * as cheerio from 'cheerio';
 import CassetteBeastGuesser from './cassetteBeastGuesser';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Who's that Cassette Beast?",
+  description: "A website for guessing Cassette Beasts.",
+};
 
 export default async function Home() {
   const speciesPage = await fetch('https://wiki.cassettebeasts.com/api.php?action=parse&page=Species&format=json');
@@ -38,7 +44,7 @@ export default async function Home() {
   });
 
   return (
-    <div className="max-w-sm mx-auto flex flex-col items-center">
+    <div className="max-w-sm mx-auto flex flex-col items-center space-y-3">
       <p className="text-2xl p-2 text-center">
         Who&apos;s that Cassette Beast?
       </p>
