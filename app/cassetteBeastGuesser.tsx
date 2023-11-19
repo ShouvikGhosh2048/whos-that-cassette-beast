@@ -162,7 +162,7 @@ export default function CassetteBeastGuesser({ names, images }: CassetteBeastGue
     }
 
     if (currentImage === null) {
-        return <div className="h-96"></div>;
+        return <div className="h-96 flex justify-between items-center">Fetching images...</div>;
     }
 
     return (
